@@ -1,0 +1,9 @@
+{
+  "name": "claude-optimisers",
+  "owner": { "name": "nicod2587" },
+  "plugins": [
+    { "name": "smart-model", "source": "./plugins/smart-model", "description": "Haiku sorts each prompt; routine turns run on Sonnet, everything else (and anything uncertain) on Opus" },
+    { "name": "usage-guard", "source": "./plugins/usage-guard", "description": "Status line with context %, session cost and rate-limit use; warnings before limits" },
+    { "name": "arena", "source": "./plugins/arena", "description": "/arena <question>: several models answer independently, Opus judges" }
+  ]
+}

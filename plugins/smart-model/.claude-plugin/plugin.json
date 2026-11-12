@@ -1,0 +1,6 @@
+{
+  "name": "smart-model",
+  "version": "0.1.0",
+  "description": "Routes routine prompts to Sonnet, keeps everything else (and anything uncertain) on Opus",
+  "license": "MIT"
+}

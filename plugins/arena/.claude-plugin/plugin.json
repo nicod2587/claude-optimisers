@@ -1,0 +1,6 @@
+{
+  "name": "arena",
+  "version": "0.1.0",
+  "description": "/arena: several models answer a hard question independently, then Opus judges agreement, disagreement and the best answer",
+  "license": "MIT"
+}

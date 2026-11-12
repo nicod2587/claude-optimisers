@@ -1,0 +1,6 @@
+{
+  "name": "usage-guard",
+  "version": "0.1.0",
+  "description": "Status line with context %, session cost and rate-limit use; one-time warnings before you hit limits",
+  "license": "MIT"
+}
