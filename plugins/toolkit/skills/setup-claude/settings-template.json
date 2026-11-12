@@ -1,0 +1,43 @@
+{
+  "model": "opus",
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5-5": { "effortLevel": "medium" }
+  },
+  "advisorModel": "fable",
+  "autoUpdatesChannel": "latest",
+  "theme": "dark",
+  "switchModelsOnFlag": true,
+  "agentPushNotifEnabled": true,
+  "deniedMcpServers": [
+    { "serverName": "claude.ai Higgsfield" },
+    { "serverName": "claude.ai Wiley Scholar Gateway" },
+    { "serverName": "claude.ai Scite" },
+    { "serverName": "claude.ai Claude Docs" },
+    { "serverName": "plugin:bio-research:c-trials" },
+    { "serverName": "plugin:bio-research:chembl" },
+    { "serverName": "plugin:bio-research:ot" },
+    { "serverName": "plugin:bio-research:biorender" },
+    { "serverName": "plugin:bio-research:synapse" },
+    { "serverName": "plugin:bio-research:wiley" }
+  ],
+  "extraKnownMarketplaces": {
+    "claude-optimisers": { "source": { "source": "github", "repo": "nicod2587/claude-optimisers" } },
+    "superpowers-marketplace": { "source": { "source": "github", "repo": "obra/superpowers-marketplace" } },
+    "context-engineering-marketplace": { "source": { "source": "github", "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering" } },
+    "obsidian-skills": { "source": { "source": "github", "repo": "kepano/obsidian-skills" } },
+    "ui-ux-pro-max-skill": { "source": { "source": "github", "repo": "nextlevelbuilder/ui-ux-pro-max-skill" } },
+    "taste-skill": { "source": { "source": "github", "repo": "Leonxlnx/taste-skill" } }
+  },
+  "enabledPlugins": {
+    "toolkit@claude-optimisers": true,
+    "smart-model@claude-optimisers": true,
+    "usage-guard@claude-optimisers": true,
+    "arena@claude-optimisers": true,
+    "superpowers@superpowers-marketplace": true,
+    "context-engineering@context-engineering-marketplace": true,
+    "obsidian@obsidian-skills": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": false,
+    "taste-skill@taste-skill": false
+  }
+}
