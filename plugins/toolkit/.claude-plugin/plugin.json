@@ -1,6 +1,9 @@
 {
   "name": "toolkit",
-  "version": "0.1.0",
-  "description": "Everyday skills (stop-slop, grill-me, handoff) plus /setup-claude, which rebuilds this Claude Code setup on a new computer",
-  "license": "MIT"
+  "version": "0.2.0",
+  "description": "Everyday skills (cheat-sheet, stop-slop, grill-me, handoff) plus /setup-claude, which rebuilds this Claude Code setup on a new computer",
+  "license": "MIT",
+  "author": {
+    "name": "nicod2587"
+  }
 }

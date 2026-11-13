@@ -10,4 +10,4 @@ keeps the original LICENSE file.
 | `grill-me` | Matt Pocock | https://github.com/mattpocock/skills | points at `toolkit:grilling`, the name it has inside this plugin |
 | `handoff` | Matt Pocock | https://github.com/mattpocock/skills | none |
 
-`setup-claude` is original to this repo.
+`setup-claude` and `cheat-sheet` are original to this repo.

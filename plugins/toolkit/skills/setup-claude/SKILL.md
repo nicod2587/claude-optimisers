@@ -47,7 +47,7 @@ first.
 
 4. **Duplicate skills.** List `~/.claude/skills/`. If a folder there has the
    same name as a skill this plugin or the obsidian plugin provides
-   (stop-slop, grill-me, grilling, handoff, obsidian-markdown, obsidian-cli,
+   (cheat-sheet, stop-slop, grill-me, grilling, handoff, obsidian-markdown, obsidian-cli,
    obsidian-bases, json-canvas, defuddle), it loads twice. Offer to move those
    folders to `~/.claude/skills-backup-<YYYY-MM-DD>/`. Move, never delete.
 

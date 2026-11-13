@@ -1,5 +1,6 @@
 {
   "name": "claude-optimisers",
+  "description": "Small Claude Code plugins that cut cost without cutting quality, plus working-method skills",
   "owner": {
     "name": "nicod2587"
   },
@@ -17,12 +18,12 @@
     {
       "name": "arena",
       "source": "./plugins/arena",
-      "description": "/arena <question>: several models answer independently, Opus judges"
+      "description": "/arena <question>: several models and briefs answer independently, Opus judges"
     },
     {
       "name": "toolkit",
       "source": "./plugins/toolkit",
-      "description": "Everyday skills (stop-slop, grill-me, handoff) and /setup-claude, which rebuilds this setup on a new computer"
+      "description": "Everyday skills (cheat-sheet, stop-slop, grill-me, handoff) and /setup-claude, which rebuilds this setup on a new computer"
     }
   ]
 }

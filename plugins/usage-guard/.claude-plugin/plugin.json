@@ -1,6 +1,9 @@
 {
   "name": "usage-guard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Status line with context %, session cost and rate-limit use; one-time warnings before you hit limits",
-  "license": "MIT"
+  "license": "MIT",
+  "author": {
+    "name": "nicod2587"
+  }
 }
