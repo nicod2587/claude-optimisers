@@ -48,10 +48,13 @@ skill on the draft.
 
 ## Academic writing
 
-State the claim, then the evidence, then the limits. Say what you did, not
-what "was done". Distinguish your result from your interpretation of it.
-Cite for claims, not for decoration. Match the venue's conventions; read
-two papers from it first.
+State the claim, then the evidence, then the limits. Distinguish your
+result from your interpretation of it. Match the verb to the evidence:
+"shows", "suggests" and "is consistent with" are three different claims.
+Cite for claims, not for decoration. While drafting, write [cite] in place
+of a reference you have not opened; never fill one in from memory. Follow
+the field's and the venue's conventions, including voice (methods sections
+in biology are often passive); read two papers from the venue first.
 
 ## Writing in someone else's voice
 

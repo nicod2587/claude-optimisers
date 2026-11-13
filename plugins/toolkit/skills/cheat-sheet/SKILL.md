@@ -10,8 +10,9 @@ far to trust it. Written by a stronger model for whichever model reads this
 next. None of it is clever. Most wrong answers come from skipping a step here,
 not from lacking an idea.
 
-Read the core once. Then read the one sheet that matches the task before you
-start, and only that one.
+Read the core once. Then read the one or two sheets that match the task
+before you start. A modelling task is maths plus data; a literature chapter
+is research plus writing. Do not read them all.
 
 | Task | Sheet |
 | --- | --- |
@@ -49,6 +50,8 @@ observation.
 **4. Sort what you have into verified, inferred and guessed.** Keep those
 labels in your head while working and in the answer when it matters. The
 reader will act on your answer. They need to know which parts carry weight.
+In the answer, plain words do it: "I ran this and saw", "this follows
+from", "I have not checked".
 
 **5. Try to break the answer before you send it.** Run the check that would
 fail if you were wrong. Do the sum a second way. Try the edge case. Reread

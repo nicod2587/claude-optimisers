@@ -11,8 +11,8 @@ checking that does not depend on the derivation being right.
 - **Guess the answer first.** Its sign, its rough size, how it should scale
   with each parameter. A derivation that disagrees with the guess needs one
   of them explained.
-- **Check whether it is a known result.** Look it up, and check that the
-  conditions of the theorem hold here. They are where misuse happens.
+- **If you are using a known result,** check that its conditions hold
+  here. They are where misuse happens.
 
 ## While deriving
 
@@ -34,6 +34,8 @@ Run at least two of these. They are cheap and they catch most mistakes.
   your head.
 - **Dimensions.** Both sides must match.
 - **A second route.** Derive it another way, or test a special case by hand.
+  A check that reuses an intermediate result of the derivation is not
+  independent of it. A simulation written from the original equations is.
 - **Sanity.** Probabilities in [0, 1], variances non-negative, populations
   not below zero, energy conserved.
 
@@ -42,6 +44,11 @@ Run at least two of these. They are cheap and they catch most mistakes.
 - Say what the model is for. Its assumptions follow from that.
 - For a dynamical system: fixed points, their stability, and what happens
   at the parameter boundaries, before any simulation.
+- For input that switches or repeats (on and off days, seasons, doses):
+  find the periodic solution from the map over one period and average
+  over that. Replacing the input by its mean is exact only when the
+  dynamics are linear and the input enters additively; otherwise it is an
+  approximation, and you should say how good.
 - When simulation and analysis disagree, find out which is wrong. Do not
   report the one you like. Check step size and initial conditions.
 - A parameter fitted to data is not a parameter measured. Say which is

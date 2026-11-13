@@ -15,6 +15,9 @@ away without a known cause is a second bug waiting.
 3. **Ask what changed.** It worked before, or it works elsewhere. The
    difference between working and broken is the search space: a commit, a
    version, an input, an environment variable, a machine.
+   Confirm that the code you are reading is the code that runs: print a
+   marker, check which interpreter and which installed package version is
+   in use, and look for a stale build folder or cache.
 4. **Write down two or three candidate causes** before testing any. For each,
    name the observation that would be true only if it were the cause.
 5. **Test the cheapest discriminating observation first.** A print, a log
@@ -39,7 +42,7 @@ away without a known cause is a second bug waiting.
   your code or your assumption. Check those first.
 - Stopping at the first bug found when the user reported something
   different. Confirm it produces their symptom.
-- Three failed attempts on one theory. Your model of the system is wrong
+- Two failed attempts on one theory. Your model of the system is wrong
   somewhere. Stop, list what you have verified with your own eyes, and
   question the item you are surest of.
 

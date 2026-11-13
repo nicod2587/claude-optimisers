@@ -29,6 +29,11 @@ right and is unsupported does more harm here than "I could not find that".
 ## Citations
 
 - Cite only what you opened in this session, with enough detail to find it.
+  For each source, say whether you read the full text or only the abstract.
+- Before giving a reference, confirm it exists: resolve the DOI or find
+  the record with a literature search tool.
+- Popular versions of a finding drop its spread and its conditions. Report
+  the range and the sample alongside the headline number.
 - Never produce a reference from memory. Authors, year, journal and title
   recalled without lookup are often a blend of two real papers. If you
   cannot verify a reference, say "I recall a study along these lines but

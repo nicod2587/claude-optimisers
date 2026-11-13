@@ -44,8 +44,6 @@ considerations.
   clearly, with the reason, then respect their decision.
 - Separate what you know from what you think. Give your confidence.
 - Do not present a guess about their life as knowledge of it.
-- Where real expertise is needed (medical, legal, financial), give what
-  you usefully can and say what a professional would add.
 - It is their choice. Give your view and the grounds; do not decide for
   them or steer by leaving things out.
 

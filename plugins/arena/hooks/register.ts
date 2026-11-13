@@ -20,6 +20,14 @@ const CONTESTANTS: { model: string; brief: string }[] = [
 ]
 const JUDGE = 'opus'
 const CONTEXT_CHARS = 20000
+// Tool results (file contents, command output) are part of what "this" refers
+// to, so the contestants see the start of each.
+const TOOL_RESULT_CHARS = 2000
+// Roomy caps: an answer cut off mid-argument would be judged as a weak answer.
+const ANSWER_TOKENS = 8000
+const VERDICT_TOKENS = 6000
+// How much of each answer stays in the conversation afterwards.
+const KEPT_ANSWER_CHARS = 3000
 
 type Answer = { model: string; text: string }
 
@@ -51,8 +59,14 @@ export const register: Register = on => {
     try {
       const msgs = await $.session.messages()
       context = msgs
-        .filter(m => m.text)
-        .map(m => `${m.role.toUpperCase()}: ${m.text}`)
+        .map(m => {
+          const results = (m.toolResults ?? [])
+            .filter(t => t.text)
+            .map(t => `[tool result]\n${t.text.slice(0, TOOL_RESULT_CHARS)}`)
+          return [m.text, ...results].filter(Boolean).join('\n')
+        })
+        .map((body, i) => (body ? `${msgs[i]!.role.toUpperCase()}: ${body}` : ''))
+        .filter(Boolean)
         .join('\n\n')
         .slice(-CONTEXT_CHARS)
     } catch {
@@ -66,6 +80,8 @@ export const register: Register = on => {
       ' State your answer first, then the reasoning that carries it, the strongest ' +
       'counter-argument, and how confident you are (low/medium/high) with the one fact ' +
       'that would change your mind. Separate what you know from what you are inferring. ' +
+      'You see the conversation and the start of each tool result, not the files ' +
+      'themselves: if the answer depends on something you were not shown, say so. ' +
       'Be concise.'
     const prompt = `${background}Question: ${question}`
 
@@ -73,19 +89,20 @@ export const register: Register = on => {
     const failed: string[] = []
     const answers = await Promise.all(
       CONTESTANTS.map(async ({ model, brief }): Promise<Answer | undefined> => {
+        const name = brief === SCEPTIC ? `${model} (sceptic)` : model
         try {
           const r = await $.model.complete({
             model,
             system: system(brief),
             prompt,
             effort: 'high',
-            maxTokens: 4000,
+            maxTokens: ANSWER_TOKENS,
           })
-          if (r.isAnswered) return { model: brief === SCEPTIC ? `${model} (sceptic)` : model, text: r.text }
+          if (r.isAnswered) return { model: name, text: r.text }
         } catch {
           // fall through
         }
-        failed.push(model)
+        failed.push(name)
         return undefined
       }),
     )
@@ -103,7 +120,7 @@ export const register: Register = on => {
       const j = await $.model.complete({
         model: JUDGE,
         effort: 'high',
-        maxTokens: 3000,
+        maxTokens: VERDICT_TOKENS,
         system:
           'You judge independent answers to a hard question. Agreement is not evidence: ' +
           'the answers may share one mistake, so check the reasoning yourself instead of ' +
@@ -125,7 +142,13 @@ export const register: Register = on => {
     const text = `## Arena: ${question}\n\n${verdict}\n\n_Contestants: ${who}${missing}_`
     return {
       text,
-      context: [`Full arena answers, for reference:\n\n${labelled}\n\n(${who})`],
+      context: [
+        'Arena answers, for reference (each may be cut short):\n\n' +
+          got
+            .map((a, i) => `### Answer ${String.fromCharCode(65 + i)}\n${a.text.slice(0, KEPT_ANSWER_CHARS)}`)
+            .join('\n\n') +
+          `\n\n(${who})`,
+      ],
     }
   })
 }

@@ -10,7 +10,10 @@ ignore you.
    the surrounding code. You cannot judge a change without knowing its
    purpose.
 2. **Read all of it,** and read past the diff: the callers, the code the
-   change relies on, the tests that cover it.
+   change relies on, the tests that cover it. Where the code calls an API
+   the author did not write, read the contract of each call: what the
+   arguments mean, what it returns on failure, whether it must be awaited.
+   Bugs collect where the author assumed instead of reading.
 3. **Look for what is wrong before what is ugly.** In this order:
    does it do what it claims; when does it break (empty, huge, concurrent,
    repeated, malformed, unauthorised input); what does it break elsewhere;
@@ -19,7 +22,7 @@ ignore you.
 4. **Verify each finding before you report it.** Trace the path that
    triggers it. Check that another layer does not already handle it. If you
    can run it, run it. A finding you have not traced is a question, and
-   should be written as one.
+   should be written as one, with the observation that would settle it.
 5. **Give each finding a concrete failure:** this input, this state, this
    wrong result. If you cannot produce one, you probably do not have a
    finding.

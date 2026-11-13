@@ -5,7 +5,11 @@
 - Open it. Print rows from the top, the bottom and the middle. Count rows
   and columns, and compare with what you were told to expect.
 - For each column that matters: type, range, missing values, duplicates,
-  impossible values, units. Plot the distribution.
+  impossible values, units. Plot its distribution.
+- Check the types after loading and parse dates explicitly. Numbers read
+  as text, and dates read as strings, sort and compare wrongly without an
+  error. Know how your library treats missing values: pandas leaves them
+  out of means and drops missing group keys silently.
 - Find out how the data came to exist: who was sampled, who dropped out,
   what was measured and how. The answer limits every conclusion after it.
 
@@ -32,6 +36,9 @@ analyst thought it was.
 
 ## Reading the result
 
+- Every number in your write-up comes from output you ran in this session.
+  Copy it from the output; do not retype it from memory or round it by
+  feel. If you did not compute a number, say so.
 - Report the effect size and its uncertainty, not only a p-value. Say
   whether the effect is large enough to matter.
 - A surprising result is more often a bug than a discovery. Look for the
@@ -45,8 +52,8 @@ analyst thought it was.
 ## Figures
 
 - One point per figure. The title can state it.
-- Label axes with units. Start bars at zero. Show the spread or the raw
-  points, not only the mean.
+- Label axes with units. Show the spread or the raw points, not only the
+  mean.
 - Check the figure against the numbers. Plots get made from the wrong
   dataframe.
 

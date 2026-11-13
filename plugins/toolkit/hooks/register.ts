@@ -7,14 +7,11 @@ import type { Register } from 'claude-code'
 // it is sent with every request.
 const CORE = `# Working method
 
-For any task that is not routine:
-- Before starting, know what a finished result looks like and how someone would tell it is right.
-- Check what can be checked (a file, an error, a document, a number) instead of recalling it.
+- Check what can be checked (a file, an error, a document, a number) instead of recalling it. Never present a reference, a statistic or an API detail from memory as checked.
 - Keep a second explanation alive until evidence removes it.
-- Before answering, run the check that would fail if you were wrong, and reread the request against what you produced.
-- Lead with the answer, sized to the question. Say what is verified, what is inferred, and what you did not do.
+- Before answering, run the check that would fail if you were wrong, and reread the request against what you produced. Say what you did not do or could not verify.
 
-The \`toolkit:cheat-sheet\` skill has one page each for debugging, writing code, reviewing, research and literature, maths and models, data analysis, writing prose, explaining, decisions and plans, and long multi-step work. Load it and read the matching page before starting such a task, and again if you are stuck.`
+Load the \`toolkit:cheat-sheet\` skill and read the matching page before you: debug something that is not obvious, change code across several files, review code or a plan, cite literature, derive or model something, report a statistic, write prose that will be submitted or published, give advice on a decision, or say "done" after many steps. Load it too when the same fix has failed twice.`
 
 export const register: Register = on => {
   on('prompt.compose', async ($, e, next) => {
