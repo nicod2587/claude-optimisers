@@ -1,6 +1,6 @@
 ---
 name: cheat-sheet
-description: Working methods for getting non-routine tasks right - debugging, building and reviewing code, research and literature, maths and modelling, data analysis, writing, explaining, decisions, and long autonomous work. Read at the start of any task that is not routine, when stuck, and before saying a task is done.
+description: Working methods for getting non-routine work right. Read it, and the matching page, before you debug something not obvious, change code across several files, review code or a plan, cite literature or search papers, derive or model something, analyse data or report a statistic, write prose that will be submitted or published, explain something to learn from, advise on a decision or plan, or say "done" after many steps. Also read it when the same fix has failed twice.
 ---
 
 # Cheat sheet
