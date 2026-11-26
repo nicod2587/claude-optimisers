@@ -36,8 +36,11 @@ first.
 2. **Plugins.** For each plugin set to `true` in the template's
    `enabledPlugins` that is not installed (`claude plugin list`), run
    `claude plugin install <plugin@marketplace> --scope user`.
-   Plugins set to `false` (the design plugins) must not be on at user scope.
-   They belong to the website project only: if the user names that project's
+   Plugins set to `false` must not be on at user scope: if one is installed
+   and enabled, disable it (`claude plugin disable <plugin@marketplace>
+   --scope user`). Superpowers is off because Matt Pocock's skills cover the
+   same ground. The design plugins (ui-ux-pro-max, taste-skill) belong to the
+   website project only: if the user names that project's
    folder, write `.claude/settings.local.json` there with both set to `true`,
    and add that path to the project's `.gitignore`.
 

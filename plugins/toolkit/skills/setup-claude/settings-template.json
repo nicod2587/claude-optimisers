@@ -36,7 +36,7 @@
     "usage-guard@claude-optimisers": true,
     "arena@claude-optimisers": true,
     "mattpocock-skills@claude-plugins-official": true,
-    "superpowers@superpowers-marketplace": true,
+    "superpowers@superpowers-marketplace": false,
     "context-engineering@context-engineering-marketplace": true,
     "obsidian@obsidian-skills": true,
     "ui-ux-pro-max@ui-ux-pro-max-skill": false,

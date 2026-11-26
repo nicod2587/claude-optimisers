@@ -2,15 +2,15 @@
 
 ## Matt Pocock skills (mattpocock-skills plugin), always on
 
-Before acting on a task, check whether a `mattpocock-skills:*` skill fits and invoke it with the Skill tool. Where one overlaps with another plugin (e.g. superpowers), use the Matt Pocock skill.
+Before acting on a task, check whether a `mattpocock-skills:*` skill fits and invoke it with the Skill tool. Where one overlaps with another plugin's skill, use the Matt Pocock skill.
 
 Skills Claude invokes itself:
 
 | Situation | Skill |
 |---|---|
-| Planning a change, a design decision, unclear requirements | `mattpocock-skills:grilling` (instead of superpowers:brainstorming) |
-| Writing or fixing code with tests | `mattpocock-skills:tdd` (instead of superpowers:test-driven-development) |
-| Bug, failing test, crash, perf regression | `mattpocock-skills:diagnosing-bugs` (instead of superpowers:systematic-debugging) |
+| Planning a change, a design decision, unclear requirements | `mattpocock-skills:grilling` |
+| Writing or fixing code with tests | `mattpocock-skills:tdd` |
+| Bug, failing test, crash, perf regression | `mattpocock-skills:diagnosing-bugs` |
 | Reviewing a diff, branch or PR | `mattpocock-skills:code-review` |
 | Module or interface design, where a seam goes | `mattpocock-skills:codebase-design` |
 | Project terminology, GLOSSARY.md, ADRs | `mattpocock-skills:domain-modeling` |
