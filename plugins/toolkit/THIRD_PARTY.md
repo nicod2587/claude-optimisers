@@ -6,8 +6,9 @@ keeps the original LICENSE file.
 | Skill | Author | Source | Changes |
 | --- | --- | --- | --- |
 | `stop-slop` | Hardik Pandya | https://github.com/hardikpandya/stop-slop | none |
-| `grilling` | Matt Pocock | https://github.com/mattpocock/skills | none |
-| `grill-me` | Matt Pocock | https://github.com/mattpocock/skills | points at `toolkit:grilling`, the name it has inside this plugin |
-| `handoff` | Matt Pocock | https://github.com/mattpocock/skills | none |
 
 `setup-claude` and `cheat-sheet` are original to this repo.
+
+Matt Pocock's skills (grilling, grill-me, handoff, tdd and the rest) are not
+copied here any more. `/setup-claude` installs his own plugin,
+`mattpocock-skills@claude-plugins-official`, which keeps itself up to date.

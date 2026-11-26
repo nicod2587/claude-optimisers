@@ -1,7 +1,7 @@
 {
   "name": "toolkit",
-  "version": "0.2.0",
-  "description": "Everyday skills (cheat-sheet, stop-slop, grill-me, handoff) plus /setup-claude, which rebuilds this Claude Code setup on a new computer",
+  "version": "0.3.0",
+  "description": "Everyday skills (cheat-sheet, stop-slop) plus /setup-claude, which rebuilds this Claude Code setup on a new computer (including Matt Pocock's skills plugin and the global CLAUDE.md)",
   "license": "MIT",
   "author": {
     "name": "nicod2587"

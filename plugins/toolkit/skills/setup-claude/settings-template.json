@@ -23,6 +23,7 @@
   ],
   "extraKnownMarketplaces": {
     "claude-optimisers": { "source": { "source": "github", "repo": "nicod2587/claude-optimisers" } },
+    "claude-plugins-official": { "source": { "source": "github", "repo": "anthropics/claude-plugins-official" } },
     "superpowers-marketplace": { "source": { "source": "github", "repo": "obra/superpowers-marketplace" } },
     "context-engineering-marketplace": { "source": { "source": "github", "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering" } },
     "obsidian-skills": { "source": { "source": "github", "repo": "kepano/obsidian-skills" } },
@@ -34,6 +35,7 @@
     "smart-model@claude-optimisers": true,
     "usage-guard@claude-optimisers": true,
     "arena@claude-optimisers": true,
+    "mattpocock-skills@claude-plugins-official": true,
     "superpowers@superpowers-marketplace": true,
     "context-engineering@context-engineering-marketplace": true,
     "obsidian@obsidian-skills": true,

@@ -23,7 +23,7 @@
     {
       "name": "toolkit",
       "source": "./plugins/toolkit",
-      "description": "Everyday skills (cheat-sheet, stop-slop, grill-me, handoff) and /setup-claude, which rebuilds this setup on a new computer"
+      "description": "Everyday skills (cheat-sheet, stop-slop) and /setup-claude, which rebuilds this setup on a new computer, including Matt Pocock's skills plugin"
     }
   ]
 }

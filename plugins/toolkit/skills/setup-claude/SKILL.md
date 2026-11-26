@@ -9,7 +9,8 @@ Set up Claude Code on this computer to match the owner's standard setup, or
 report how far this computer is from it. If the user passed `check`, only
 report: change nothing.
 
-The target settings are in `settings-template.json` next to this file. Read it
+The target settings are in `settings-template.json` next to this file, and the
+target global instructions are in `CLAUDE.md` next to this file. Read both
 first.
 
 ## Rules
@@ -47,17 +48,26 @@ first.
 
 4. **Duplicate skills.** List `~/.claude/skills/`. If a folder there has the
    same name as a skill this plugin or the obsidian plugin provides
-   (cheat-sheet, stop-slop, grill-me, grilling, handoff, obsidian-markdown, obsidian-cli,
-   obsidian-bases, json-canvas, defuddle), it loads twice. Offer to move those
+   (cheat-sheet, stop-slop, obsidian-markdown, obsidian-cli, obsidian-bases, json-canvas,
+   defuddle) or as one of Matt Pocock's skills (grill-me, grilling, handoff,
+   tdd, diagnosing-bugs, code-review, and the rest of mattpocock-skills), it
+   loads twice. Offer to move those
    folders to `~/.claude/skills-backup-<YYYY-MM-DD>/`. Move, never delete.
 
-5. **MCP servers that follow the account.** Gmail, Google Drive, Google
+5. **Global CLAUDE.md.** The target is `CLAUDE.md` next to this file. If
+   `~/.claude/CLAUDE.md` does not exist, copy it there. If it exists and
+   already has the "Matt Pocock skills" section, replace only that section with
+   the target's. Otherwise append the target's section to the end. Copy the
+   existing file to `~/.claude/CLAUDE.md.bak-<YYYY-MM-DD>` before changing it.
+   Never drop other sections.
+
+6. **MCP servers that follow the account.** Gmail, Google Drive, Google
    Calendar, Undermind and the bio-research plugin (PubMed, bioRxiv,
    Consensus) come from the claude.ai account, not this computer. Run
    `claude mcp list` and report which are connected. For any missing, tell the
    user to sign in with the same claude.ai account and run `/mcp`.
 
-6. **Google Scholar MCP (optional, needs Python).** This one is local. If the
+7. **Google Scholar MCP (optional, needs Python).** This one is local. If the
    user wants it and it is missing:
    - clone `https://github.com/JackKuo666/Google-Scholar-MCP-Server` into
      `~/MCP/Google-Scholar-MCP-Server`
@@ -65,7 +75,7 @@ first.
    - `claude mcp add google-scholar --scope user -- <venv python> <repo>/google_scholar_server.py`
    Read the repo's README first; it is third-party code.
 
-7. **Report.** A short table: each step, done / already fine / skipped / needs
+8. **Report.** A short table: each step, done / already fine / skipped / needs
    the user, and anything to do by hand. End by telling the user to start a
    new session so the changes load.
 
@@ -73,7 +83,8 @@ first.
 
 - Permission rules: they are specific to each computer's folders.
 - Project `CLAUDE.md` files and the second brain: they live in the project
-  folders, not here.
+  folders, not here. (The global `~/.claude/CLAUDE.md` is covered in step 5.)
+- `/setup-matt-pocock-skills`: run it once inside each code repo, by hand.
 - Cloud sessions (claude.ai/code) ignore user settings. To cover a repo there,
   add the `extraKnownMarketplaces` and `enabledPlugins` blocks from the
   template to that repo's `.claude/settings.json`.
